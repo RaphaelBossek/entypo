@@ -9,13 +9,12 @@ Installation on Ubuntu 12.04 (or newer)
 **(!)** Use Ubuntu **12.04**. Or you will have to manually install fresh
 freetype library, to build ttfautohint.
 
-Reset the enronment first
+Reset the environment first
 
     make clean
 
-Install the latest Node.js environment for your Ubuntu version
-
-    https://launchpad.net/~chris-lea/+archive/node.js/ 
+Install the latest Node.js environment for your Ubuntu version from
+https://launchpad.net/~chris-lea/+archive/node.js/ 
 
 Install system dependencies (fontforge & python modules):
 
@@ -30,7 +29,7 @@ including the font himself:
 If you are working on multiple font you would like to have only one instance of
 heavy dependencies like _ttfautohint_ installed. Run this:
 
-    cd support/font-builder && sudo make support-install
+    sudo make -C support/font-builder support-install
 
 
 Note that you don't need to install system dependencies more than once.
