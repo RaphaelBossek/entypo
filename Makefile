@@ -40,6 +40,7 @@ src/svg/note.svg:	src/original/entypo.svg src/original/entypo-social.svg config.
 %.ttf:
 	update-entypo.sh src/original
 	$(RM_F) src/original/*.svg
+	check.js --locals config.yml --input src/original/entypo.yml
 
 src/original/entypo.svg:	src/original/entypo.ttf
 src/original/entypo-social.svg:	src/original/entypo-social.ttf
@@ -83,7 +84,6 @@ support/font-builder/support/ttf2eot/ttf2eot support/font-builder/support/ttfaut
 html:	font/demo.html
 font/demo.html:	support src/demo/demo.jade
 	tpl-render.js --locals config.yml --input ./src/demo/demo.jade --output ./font/demo.html
-
 
 gh-pages:
 	@if test -z ${REMOTE_REPO} ; then \
