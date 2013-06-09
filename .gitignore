@@ -1,1 +1,4 @@
 node_modules/
+font/
+src/svg/
+support/font-builder/
