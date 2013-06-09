@@ -21,7 +21,11 @@ FONTFORGE ?= $(shell which fontforge)
 RM_F ?= rm -f
 
 all:	dist
-dist: font html
+dist:	font.zip
+
+font.zip:	font html
+	$(RM_F) font.zip
+	cd font && zip ../font.zip *
 
 dump:	src/svg/note.svg
 src/svg/note.svg:	src/original/entypo.svg src/original/entypo-social.svg config.yml
@@ -81,9 +85,12 @@ support/font-builder/Makefile support/font-builder/package.json:
 support/font-builder/support/ttf2eot/ttf2eot support/font-builder/support/ttfautohint/frontend/ttfautohint:	support/font-builder/Makefile
 	$(MAKE) -C support/font-builder
 
-html:	font/demo.html
+html:	font/demo.html font/entypo.css
 font/demo.html:	support src/demo/demo.jade
 	tpl-render.js --locals config.yml --input ./src/demo/demo.jade --output ./font/demo.html
+
+font/entypo.css:	support src/demo/entypo.css.jade
+	tpl-render.js --locals config.yml --input ./src/demo/entypo.css.jade --output ./font/entypo.css
 
 gh-pages:
 	@if test -z ${REMOTE_REPO} ; then \
