@@ -3,21 +3,28 @@ Development docs
 
 Set if scripts to easily build webfonts from SVG images
 
-Installation
-------------
-
-### Ubuntu
+Installation on Ubuntu 12.04 (or newer)
+---------------------------------------
 
 **(!)** Use Ubuntu **12.04**. Or you will have to manually install fresh
 freetype library, to build ttfautohint.
 
-Init font-builder and build additional software (ttf2eot, ttfautohint):
+Reset the enronment first
 
-    make support
+    make clean
+
+Install the latest Node.js environment for your Ubuntu version
+
+    https://launchpad.net/~chris-lea/+archive/node.js/ 
 
 Install system dependencies (fontforge & python modules):
 
-    cd support/font-builder && sudo make dev-deps
+    sudo make dev-deps
+
+Init font-builder and build additional software (ttf2eot, ttfautohint)
+including the font himself:
+
+    make
 
 
 If you are working on multiple font you would like to have only one instance of
@@ -27,16 +34,6 @@ heavy dependencies like _ttfautohint_ installed. Run this:
 
 
 Note that you don't need to install system dependencies more than once.
-
-
-### Mac
-
-TBD. Anyone, please help.
-
-
-### Windows
-
-TBD. Anyone, please help.
 
 
 Making font

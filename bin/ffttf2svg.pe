@@ -1,0 +1,8 @@
+#!/usr/bin/env fontforge
+# http://fontforge.org/scripting-alpha.html
+Open($1)
+#ScaleToEm($em)
+#ScaleToEm(500)
+#ScaleToEm($ascent,$descent)
+#ScaleToEm(500,0)
+Generate($2)

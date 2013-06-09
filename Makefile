@@ -16,33 +16,38 @@ REMOTE_REPO ?= $(shell git config --get remote.${REMOTE_NAME}.url)
 PATH := $(PATH):./support/font-builder/support/ttf2eot
 PATH := $(PATH):./support/font-builder/support/ttfautohint/frontend
 PATH := $(PATH):./support/font-builder/bin
+PATH := $(PATH):./bin
+FONTFORGE ?= $(shell which fontforge)
+RM_F ?= rm -f
 
-
+all:	dist
 dist: font html
 
-dump:
-	rm -r ./src/svg/
-	mkdir ./src/svg/
-	font-dump.js --hcrop -c config.yml -f -i ./src/original/Entypo.svg -o ./src/svg/ -d diff.yml
-	font-dump.js --hcrop -c config.yml -f -i ./src/original/EntypoSocial.svg -o ./src/svg/ -d diff.yml
+dump:	src/svg/note.svg
+src/svg/note.svg:	src/original/entypo.svg src/original/entypo-social.svg config.yml
+	rm -rf src/svg
+	mkdir src/svg
+	font-dump.js --hcrop -c config.yml -f -i src/original/entypo.svg -o ./src/svg/ -d diff.yml
+	font-dump.js --hcrop -c config.yml -f -i src/original/entypo-social.svg -o ./src/svg/ -d diff.yml
 
+%.svg:	%.ttf
+	: # FIXME How to autofix missed points in FontForge?
+	$(FONTFORGE) -script ./bin/ffttf2svg.pe "$<" "$@.svg"
+	: # Changed descent to 0, accent to 500, to fix scale
+	sed -e 's,units-per-em="1000",units-per-em="500",g;s,ascent="750",ascent="500",g;s,descent="-250",descent="0",g' "$@.svg" >"$@"
+	rm "$@.svg"
 
-font:
-	@if test ! -d support/font-builder/bin ; then \
-		echo "font-builder binaries not found. run:" >&2 ; \
-		echo "  make support" >&2 ; \
-		exit 128 ; \
-		fi
-	@if test ! `which ttf2eot` ; then \
-		echo "ttf2eot not found. run:" >&2 ; \
-		echo "  make support" >&2 ; \
-		exit 128 ; \
-		fi
-	@if test ! `which ttfautohint` ; then \
-		echo "ttfautohint not found. run:" >&2 ; \
-		echo "  make support" >&2 ; \
-		exit 128 ; \
-		fi
+%.ttf:
+	update-entypo.sh src/original
+	$(RM_F) src/original/*.svg
+
+src/original/entypo.svg:	src/original/entypo.ttf
+src/original/entypo-social.svg:	src/original/entypo-social.ttf
+
+font:	font/$(FONT_NAME).ttf font/$(FONT_NAME).eot
+font/$(FONT_NAME).ttf font/$(FONT_NAME).eot:	support dump
+	rm -rf font
+	mkdir -p font
 	fontbuild.py -c ./config.yml -t ./src/font_template.sfd -i ./src/svg -o ./font/$(FONT_NAME).ttf
 	ttfautohint --latin-fallback --hinting-limit=200 --hinting-range-max=50 --symbol ./font/$(FONT_NAME).ttf ./font/$(FONT_NAME)-hinted.ttf
 	mv ./font/$(FONT_NAME)-hinted.ttf ./font/$(FONT_NAME).ttf
@@ -50,26 +55,33 @@ font:
 	ttf2eot < ./font/$(FONT_NAME).ttf >./font/$(FONT_NAME).eot
 
 
-npm-deps:
+package.json:	support/font-builder/package.json
+	ln -s $<
+
+npm-deps:	node_modules/underscore
+node_modules/underscore:	package.json
 	@if test ! `which npm` ; then \
 		echo "Node.JS and NPM are required for html demo generation." >&2 ; \
 		echo "This is non-fatal error and you'll still be able to build font," >&2 ; \
 		echo "however, to build demo with >> make html << you need:" >&2 ; \
 		echo "  - Install Node.JS and NPM" >&2 ; \
 		echo "  - Run this task once again" >&2 ; \
-		else \
-		npm install -g jade js-yaml.bin ; \
+		exti 127; \
 		fi
+	: npm install jade js-yaml.bin
+	npm install
 
+support:	support/font-builder/support/ttf2eot/ttf2eot support/font-builder/support/ttfautohint/frontend/ttfautohint npm-deps
 
-support:
+support/font-builder/Makefile support/font-builder/package.json:
 	git submodule init support/font-builder
 	git submodule update support/font-builder
-	which ttf2eot ttfautohint > /dev/null || (cd support/font-builder && $(MAKE))
-	which js-yaml jade > /dev/null || $(MAKE) npm-deps
 
+support/font-builder/support/ttf2eot/ttf2eot support/font-builder/support/ttfautohint/frontend/ttfautohint:	support/font-builder/Makefile
+	$(MAKE) -C support/font-builder
 
-html:
+html:	font/demo.html
+font/demo.html:	support src/demo/demo.jade
 	tpl-render.js --locals config.yml --input ./src/demo/demo.jade --output ./font/demo.html
 
 
@@ -89,5 +101,13 @@ gh-pages:
 		git push --force remote +master:gh-pages 
 	rm -rf ${TMP_PATH}
 
+dev-deps:	support/font-builder/Makefile
+	$(MAKE) -C support/font-builder $@
+	apt-get install -f fontforge nodejs
 
-.PHONY: font npm-deps support
+clean:
+	rm -rf font src/svg src/original support/font-builder node_modules
+	-test -L package.json && rm package.json
+	$(MAKE) support/font-builder/Makefile
+
+.PHONY: dist dump font npm-deps support html clean dev-deps
