@@ -111,24 +111,27 @@ glyphs:
     uid: 39e2e6682c28e1e3b5f49825a19717c4
     search: [music, note, song]
 
-  - css: note-beamed
+  - css: beamed-note
     code: 0x266b
     uid: fda731b5a4026685e1a9c7e64228e2b2
     search: [music, note, song]
 
   - css: music
-    code: 0x1f3b5
+    code: 0xf3b5
+    from: 0x1f3b5
     uid: f2a036a85c0a6a46b0c9709a70e1bb70
     search: [song, music, sound]
 
 
   - css: search
-    code: 0x1f50d
+    code: 0xf50d
+    from: 0x1f50d
     uid: 7222571caa5c15f83dcfd447c58d68d9
     search: [search, find]
 
   - css: flashlight
-    code: 0x1f526
+    code: 0xf526
+    from: 0x1f526
     uid: c9b928dc82d7d77033644fcf59dca3b3
     search: [search, find, flashlight]
 
@@ -161,33 +164,38 @@ glyphs:
 
 
   - css: user
-    code: 0x1f464
+    code: 0xf464
+    from: 0x1f464
     uid: bbd66ef66bb8fa9edde54d9a90b89150
     search: [profile, contact, user]
 
   - css: users
-    code: 0x1f465
+    code: 0xf465
+    from: 0x1f465
     uid: ecf8edb95c3f45eb433b4cce7ba9f740
     search: [users, contacts, friends]
 
-  - css: user-add
+  - css: add-user
     code: 0xe700
     uid: 6274e0601f2feef7eced89146e708de0
     search: [profile, contact, user, add]
 
 
   - css: video
-    code: 0x1f3ac
+    code: 0xf3ac
+    from: 0x1f3ac
     uid: 6341ebcbe1ed1f6777c1b9527ead368e
     search: [movie, video, film]
 
   - css: picture
-    code: 0x1f304
+    code: 0xf305
+    from: 0x1f304
     uid: 3def559c3c39b8500882e02892b7daa8
     search: [image, picture, photo]
 
   - css: camera
-    code: 0x1f4f7
+    code: 0xf4f7
+    from: 0x1f4f7
     uid: 85017ab6ca074831a8de771b40e9640c
     search: [camera, photo]
 
@@ -197,7 +205,7 @@ glyphs:
     uid: 5e9f01871d44e56b45ecbfd00f4dbc3a
     search: [image, list, thumbnails]
 
-  - css: menu
+  - css: list
     code: 0x2630
     uid: 2cfb3f2b46b34a1790aec0aa846297b6
     search: [menu, list]
@@ -208,18 +216,18 @@ glyphs:
     uid: 14017aae737730faeda4a6fd8fb3a5f0
     search: [ok, yes, check, mark]
 
-  - css: cancel
+  - css: cross
     code: 0x2715
     from: 0x274c
     uid: c709da589c923ba3c2ad48d9fc563e93
     search: [close, cancel, reject]
 
-  - css: cancel-circled
+  - css: circled-cross
     code: 0x2716
     uid: c759418c008e9562944080fee617fc76
     search: [close, cancel, reject]
 
-  - css: cancel-squared
+  - css: squared-cross
     code: 0x274e
     uid: bf45c39702763f1803b550c36a0ceb12
     search: [close, cancel, reject]
@@ -230,13 +238,13 @@ glyphs:
     uid: 70370693ada58ef0a60fa0984fe8d52a
     search: [plus]
 
-  - css: plus-circled
+  - css: circled-plus
     code: 0x2795
     from: 0x2295
     uid: a66cdc7278e6b33b8bd44a141f5e1a8d
     search: [plus]
 
-  - css: plus-squared
+  - css: squared-plus
     code: 0x229e
     uid: 9e1c33b6849ceb08db8acfaf02188b7d
     search: [plus, expand]
@@ -247,13 +255,13 @@ glyphs:
     uid: 1256e3054823e304d7e452a589cf8bb8
     search: [minus]
 
-  - css: minus-circled
+  - css: circled-minus
     code: 0x2796
     from: 0x2296
     uid: 3eb93689881ad0804f87052a53edc2b6
     search: [minus]
 
-  - css: minus-squared
+  - css: squared-minus
     code: 0x229f
     uid: 4ffa544c1a81c905f0a8a5745d8b9faa
     search: [minus, collapse]
@@ -264,7 +272,7 @@ glyphs:
     uid: 3a230e539a4f3b904debd04c6c155034
     search: [help, question]
 
-  - css: help-circled
+  - css: circled-help
     code: 0xe704
     uid: de9a631a7d18106aea1c89ba51b1990a
     search: [help, question]
@@ -274,14 +282,15 @@ glyphs:
     uid: 63b86fedd4ee9ad2105f54f4888e7088
     search: [info]
 
-  - css: info-circled
+  - css: circled-info
     code: 0xe705
     uid: 7e4164950ffa4990961958b2d6318658
     search: [info]
 
 
   - css: back
-    code: 0x1f519
+    code: 0xf519
+    from: 0x1f519
     uid: 3ba4275937db277075fc47d6b5a69a2e
     search: [back, return]
 
@@ -292,22 +301,26 @@ glyphs:
     search: [home]
 
   - css: link
-    code: 0x1f517
+    code: 0xf517
+    from: 0x1f517
     uid: 815503841e980c848f55e0271deacead
     search: [link, url]
 
   - css: attach
-    code: 0x1f4ce
+    code: 0xf4ce
+    from: 0x1f4ce
     uid: 44b9e75612c5fad5505edd70d071651f
     search: [attach, clip]
 
   - css: lock
-    code: 0x1f512
+    code: 0xf512
+    from: 0x1f512
     uid: 1a7104205ea96e6f40ac716d0ca72f21
     search: [lock]
 
   - css: lock-open
-    code: 0x1f513
+    code: 0xf513
+    from: 0x1f513
     uid: e81fc3a0d39ace6ee735d7b24eedd56d
     search: [lock, open, unlock]
 
@@ -322,12 +335,14 @@ glyphs:
     search: [tag, price, offer]
 
   - css: bookmark
-    code: 0x1f516
+    code: 0xf516
+    from: 0x1f516
     uid: 23912d5623126e14b7b137c3ba557168
     search: [bookmark]
 
   - css: bookmarks
-    code: 0x1f4d1
+    code: 0xf4d1
+    from: 0x1f4d1
     uid: 8538a2249db7f07ae75411886732fb87
     search: [bookmarks]
 
@@ -338,21 +353,25 @@ glyphs:
     search: [flag]
 
   - css: thumbs-up
-    code: 0x1f44d
+    code: 0xf44d
+    from: 0x1f44d
     uid: 7ad4d2306ebda8452e5e3eff3cd8241c
     search: [thumbs, up, like, love, vote]
   - css: thumbs-down
-    code: 0x1f44e
+    code: 0xf44e
+    from: 0x1f44e
     uid: 429fba993b729174468a9493613ad1ba
     search: [thumbs, down, dislike, unlike, vote]
 
 
   - css: download
-    code: 0x1f4e5
+    code: 0xf4e5
+    from: 0x1f4e5
     uid: b08cfe8039de2ce815686aced2caef06
     search: [download]
   - css: upload
-    code: 0x1f4e4
+    code: 0xf4e4
+    from: 0x1f4e4
     uid: 44199a54057e6e264fde61a49b034171
     search: [upload]
   - css: upload-cloud
@@ -429,17 +448,19 @@ glyphs:
 
 
   - css: bell
-    code: 0x1f514
+    code: 0xf514
+    from: 0x1f514
     uid: 2c5335c6e56b876139d7a58ab2f4b2fe
     search: [alert, bell, jingle]
 
-  - css: attention
+  - css: warning
     code: 0x26a0
     uid: 97902f87200ce74d181044df02a0458d
     search: [attention, warning, alert]
 
-  - css: alert
-    code: 0x1f4a5
+  - css: new
+    code: 0xf4a5
+    from: 0x1f4a5
     uid: 39a5a0d7ce8342d149373b2ce219503a
     search: [attention, warning, alert]
 
@@ -494,37 +515,42 @@ glyphs:
     code: 0xe736
     uid: 922ab2cb66943a83de969990289ef1dc
     search: [doc, article]
-  - css: doc-landscape
+  - css: landscape-doc
     code: 0xe737
     uid: 8782cc70184b33096ae927590d1fadc4
     search: [doc, article]
 
-  - css: doc-text
-    code: 0x1f4c4
+  - css: text-doc
+    code: 0xf4c4
+    from: 0x1f4c4
     uid: 1189604bf305b6b03a74685ce60e6632
     search: [doc, text, article]
-  - css: doc-text-inv
+  - css: text-doc-inverted
     code: 0xe731
     uid: 1d7c1d30ad49a988556273a238097c2a
     search: [doc, text, article]
 
   - css: newspaper
-    code: 0x1f4f0
+    code: 0xf4f0
+    from: 0x1f4f0
     uid: da0fd38d651815e3a12f6c030ff1fe5b
     search: [newspaper, article]
 
-  - css: book-open
-    code: 0x1f4d6
+  - css: open-book
+    code: 0xf4d6
+    from: 0x1f4d6
     uid: 51727ca007aa35ceabcaffc28934faee
     search: [book, doc]
 
   - css: book
-    code: 0x1f4d5
+    code: 0xf4d5
+    from: 0x1f4d5
     uid: 48b79f27e4798f23bafa07b55dbe5b73
     search: [book]
 
   - css: folder
-    code: 0x1f4c1
+    code: 0xf4c1
+    from: 0x1f4c1
     uid: 0ccb084ddeeae372673793ed0b45bb4a
     search: [folder]
 
@@ -536,7 +562,8 @@ glyphs:
     search: [archive]
 
   - css: box
-    code: 0x1f4e6
+    code: 0xf4e6
+    from: 0x1f4e6
     uid: cc05df515bebe11df3ada0a5910a8f6d
     search: [box]
 
@@ -547,7 +574,8 @@ glyphs:
     search: [rss]
 
   - css: phone
-    code: 0x1f4de
+    code: 0xf4de
+    from: 0x1f4de
     uid: 5854855e963044f93b15738a5bb27a29
     search: [phone, telephone, call]
 
@@ -572,19 +600,21 @@ glyphs:
     search: [shareable]
 
 
-  - css: basket
+  - css: cart
     code: 0xe73d
     uid: e126987944593dfee041f8e2a68145db
     search: [basket, shopping, cart]
 
   - css: bag
-    code: 0x1f45c
+    code: 0xf45c
+    from: 0x1f45c
     uid: 2c71ee1c65e1992ba32d5ffc5ee7f337
     search: [bag, shopping, cart]
 
 
   - css: calendar
-    code: 0x1f4c5
+    code: 0xf4c5
+    from: 0x1f4c5
     uid: 413717f5ea649e8d8b93938be277264a
     search: [calendar, date]
 
@@ -601,15 +631,18 @@ glyphs:
 
     # Sound
   - css: mic
-    code: 0x1f3a4
+    code: 0xf3a4
+    from: 0x1f3a4
     uid: 1e099a876c8a6a83f10c9bafa9886614
     search: [mic]
   - css: mute
-    code: 0x1f507
+    code: 0xf507
+    from: 0x1f507
     uid: 2f750a9be253e8e451209574336e7020
     search: [volume, sound, mute]
   - css: sound
-    code: 0x1f50a
+    code: 0xf50a
+    from: 0x1f50a
     uid: ef51920c7a9bed4d87f53709db115e34
     search: [volume, sound]
   - css: volume
@@ -621,7 +654,8 @@ glyphs:
 
 
   - css: clock
-    code: 0x1f554
+    code: 0xf554
+    from: 0x1f554
     uid: 8663320a860b00f26e94d3d15c9ba99a
     search: [clock, time]
 
@@ -631,17 +665,20 @@ glyphs:
     search: [clock, hourglass, busy, wait]
 
 
-  - css: lamp
-    code: 0x1f4a1
+  - css: light-bulb
+    code: 0xf4a1
+    from: 0x1f4a1
     uid: 4b20e1deee87faf4c3fab735fbd4bc1a
     search: [idea, lamp, light]
 
   - css: light-down
-    code: 0x1f505
+    code: 0xf505
+    from: 0x1f505
     uid: 2d14369ed7f129e779eaa30195368218
     search: [light, dim, bright]
   - css: light-up
-    code: 0x1f506
+    code: 0xf506
+    from: 0x1f506
     uid: f8e120c48c070f8afd2d072651b4fb9f
     search: [light, dim, bright]
 
@@ -652,7 +689,8 @@ glyphs:
 
 
   - css: block
-    code: 0x1f6ab
+    code: 0xf6ab
+    from: 0x1f6ab
     uid: 29e7f6072d5935d7818204d9b088508b
     search: [block, deny]
 
@@ -677,7 +715,7 @@ glyphs:
     uid: 77bcf90f0c68635bab5abfb4ed736696
     search: [publish]
 
-  - css: window
+  - css: browser
     code: 0xe74e
     uid: 744a71fe4b5ab7c4f4b7cd598e9bf75a
     search: [window]
@@ -691,72 +729,72 @@ glyphs:
 
 
     # Arrows
-  - css: down-circled
+  - css: circled-down
     code: 0xe758
     uid: 40ef3542646bed70cb63f1290c9d98c9
     search: [arrow, down, download]
-  - css: left-circled
+  - css: circled-left
     code: 0xe759
     uid: 0db0310883e0bdacfd1bb2d394238e8a
     search: [arrow, left]
-  - css: right-circled
+  - css: circled-right
     code: 0xe75a
     uid: 52725ff4d4042964bd3a60609bf3695b
     search: [arrow, right]
-  - css: up-circled
+  - css: circled-up
     code: 0xe75b
     uid: 64691230b90991883f94c6dfb2afc90a
     search: [arrow, up, upload]
 
 
     # Arrows
-  - css: down-open
+  - css: chevron-down
     code: 0xe75c
     uid: 8704cd847a47b64265b8bb110c8b4d62
     search: [arrow, down]
-  - css: left-open
+  - css: chevron-left
     code: 0xe75d
     uid: c311c48d79488965b0fab7f9cd12b6b5
     search: [arrow, left]
-  - css: right-open
+  - css: chevron-right
     code: 0xe75e
     uid: 749e7d90a9182938180f1d2d8c33584e
     search: [arrow, right]
-  - css: up-open
+  - css: chevron-up
     code: 0xe75f
     uid: 9c7ff134960bb5a82404e4aeaab366d9
     search: [arrow, up]
 
-  - css: down-open-mini
+  - css: chevron-small-down
     code: 0xe760
     uid: f11c9e95ae5eaa84d193e8fa1d38c6f9
     search: [arrow, down]
-  - css: left-open-mini
+  - css: chevron-small-left
     code: 0xe761
     uid: 592717bd601645d61517d2a584d04127
     search: [arrow, left]
-  - css: right-open-mini
+  - css: chevron-small-right
     code: 0xe762
     uid: 37f6cfbb4062ed0d01b351ec35c334ff
     search: [arrow, right]
-  - css: up-open-mini
+  - css: chevron-small-up
     code: 0xe763
     uid: 9e251fb8e9e1c71ab09683468e0479a3
     search: [arrow, up]
 
-  - css: down-open-big
+  - css: chevron-thin-down
     code: 0xe764
     uid: 289b5f92f23acf1059c93fbf401c1ad5
     search: [arrow, down]
-  - css: left-open-big
+  - css: chevron-thin-left
     code: 0xe765
     uid: 884cfc3e6e2d456dd2a2ca0dbb9e6337
     search: [arrow, left]
-  - css: right-open-big
+  - css: chevron-thin-right
     code: 0xe766
     uid: 004882ab2d5c418c5b2060e80596279b
     search: [arrow, right]
-  - css: up-open-big
+  - css: chevron-thin-up
     code: 0xe767
     uid: 0805cca616b3c12714f35af4d0912c10
     search: [arrow, up]
@@ -782,19 +820,19 @@ glyphs:
 
 
     # Arrows
-  - css: down-dir
+  - css: triangle-down
     code: 0x25be
     uid: 7e89c12b577c31bc91bfb61bb597f01f
     search: [arrow, down]
-  - css: left-dir
+  - css: triangle-left
     code: 0x25c2
     uid: 9aeaf29161eb005a308bbd624d6e066a
     search: [arrow, left]
-  - css: right-dir
+  - css: triangle-right
     code: 0x25b8
     uid: ff9a85aa20950dcc0615a2707a2b3f8e
     search: [arrow, right]
-  - css: up-dir
+  - css: triangle-up
     code: 0x25b4
     uid: 401b644723fb2f20b0df30cce7745c18
     search: [arrow, up]
@@ -850,8 +888,9 @@ glyphs:
     uid: bb46b15cb78cc4cc05d3d715d522ac4d
     search: [reload, redo, repeat]
 
-  - css: arrows-ccw
-    code: 0x1f504
+  - css: cycle
+    code: 0xf504
+    from: 0x1f504
     uid: 3bd18d47a12b8709e9f4fe9ead4f7518
     search: [circle, sync, reload, refresh]
 
@@ -868,12 +907,14 @@ glyphs:
 
 
   - css: shuffle
-    code: 0x1f500
+    code: 0xf500
+    from: 0x1f500
     uid: 3d349daaea304032a7669b4f24931b6c
     search: [shuffle, random]
 
   - css: loop
-    code: 0x1f501
+    code: 0xf501
+    from: 0x1f501
     uid: 8e0220796066428d6ddea96a4f1b5131
     search: [loop, repeat]
 
@@ -892,7 +933,7 @@ glyphs:
     code: 0x25a0
     uid: 48f2e18872fe74d4579a4c8a1527fc1e
     search: [stop, player]
-  - css: pause
+  - css: paus
     code: 0x2389
     from: 0x2016
     uid: d8d378d0ce413f231dfa37592e39c227
@@ -910,11 +951,11 @@ glyphs:
     code: 0x23ee
     uid: ceefe7653a4f6edaacce9e7f196cec5a
     search: [left, player]
-  - css: fast-forward
+  - css: ff
     code: 0x23e9
     uid: 18f7c393e3532e40edd45607c9d99988
     search: [right, player]
-  - css: fast-backward
+  - css: fb
     code: 0x23ea
     uid: 85806fd8ab907f45d34f976354a0df23
     search: [left, player]
@@ -940,43 +981,48 @@ glyphs:
 
 
 
-  - css: target
-    code: 0x1f3af
+  - css: hair-cross
+    code: 0xf3af
+    from: 0x1f3af
     uid: 3eadc3e443cf1c7e17f1b44d21254c00
     search: [target]
 
   - css: palette
-    code: 0x1f3a8
+    code: 0xf3a8
+    from: 0x1f3a8
     uid: 80451d627470ea7f977a263fdb771d7b
     search: [palette]
 
 
-  - css: list
+  - css: numbered-list
     code: 0xe005
     uid: 3626b3f3a0b284e7f4166b815719aece
     search: [list]
 
-  - css: list-add
+  - css: add-to-list
     code: 0xe003
     uid: 97bd5542ed3e143d2ee9b60e14487615
     search: [add, list]
 
 
   - css: signal
-    code: 0x1f4f6
+    code: 0xf4f6
+    from: 0x1f4f6
     uid: 84a7262985600b683bbab0da9298776d
     search: [broadcast, wifi, signal]
 
 
 
   - css: trophy
-    code: 0x1f3c6
+    code: 0xf3c6
+    from: 0x1f3c6
     uid: 978aa8facd816df874039e139cb0cdde
     search: [top, trophy]
 
 
   - css: battery
-    code: 0x1f50b
+    code: 0xf50b
+    from: 0x1f50b
     uid: a51290161c48d96d7f2e2151a4cbcde1
     search: [battery]
 
@@ -988,12 +1034,14 @@ glyphs:
 
 
   - css: monitor
-    code: 0x1f4bb
+    code: 0xf4bb
+    from: 0x1f4bb
     uid: b7a336095aa4535c3689cb557edf23db
     search: [tv, screen, monitor]
 
   - css: mobile
-    code: 0x1f4f1
+    code: 0xf4f1
+    from: 0x1f4f1
     uid: 767fede84586366cd7d6c835be745454
     search: [mobile, iphone]
 
@@ -1002,9 +1050,10 @@ glyphs:
     uid: 414fe97e4af5215a06d29be0f2cecdf5
     search: [net]
 
-  - code: 0x1f4bf
+  - css: cd
+    code: 0xf4bf
+    from: 0x1f4bf
     uid: 16f88519423df34fc5c48be7ded81b8f
-    css: cd
     search: [cd, vinyl]
 
   - css: inbox
@@ -1019,7 +1068,8 @@ glyphs:
 
 
   - css: globe
-    code: 0x1f30e
+    code: 0xf311
+    from: 0x1f30e
     uid: 6a12c2b74456ea21cc984e11dec227a1
     search: [globe]
 
@@ -1028,7 +1078,7 @@ glyphs:
     uid: 114fed43140e2b5ce42c48b95c19375b
     search: [cloud]
 
-  - css: cloud-thunder
+  - css: thunder-cloud
     code: 0x26c8
     uid: 66a40c7c0ee5ea61f4b6aa0dd0f9ebb9
     search: [cloud, thunder, bolt]
@@ -1043,7 +1093,7 @@ glyphs:
     uid: 0d03db7afd4857accf1821efdc8ea72b
     search: [moon, sleep]
 
-  - css: flight
+  - css: airplane
     code: 0x2708
     uid: 6e8aea8fff9525dfc5149f0c03669091
     search: [flight, plane, airplane, fly]
@@ -1056,7 +1106,8 @@ glyphs:
 
 
   - css: leaf
-    code: 0x1f342
+    code: 0xf343
+    from: 0x1f342
     uid: 41d534223ef447a01af3e2f629ec70eb
     search: [leaf]
 
@@ -1071,7 +1122,8 @@ glyphs:
     search: [mouse, website]
 
   - css: briefcase
-    code: 0x1f4bc
+    code: 0xf4bc
+    from: 0x1f4bc
     uid: 9ea7cce5e08e5ac2c225fabf2e6dc353
     search: [briefcase]
 
@@ -1087,12 +1139,12 @@ glyphs:
     from: 0x23f4
     uid: d2c6b59d9a239140cb76be0627480855
     search: [dot]
-  - css: dot-2
+  - css: two-dots
     code: 0xe78c
     from: 0x23f5
     uid: 13b11ab72c6ae9c97ee12428e17f3a4e
     search: [dot, flickr]
-  - css: dot-3
+  - css: three-dots
     code: 0xe78d
     from: 0x23f6
     uid: d10920db2e79c997c5e783279291970c
@@ -1122,36 +1174,40 @@ glyphs:
     search: [erase]
 
 
-  - css: chart-pie
+  - css: pie-chart
     code: 0xe751
     from: 0x25f4
     uid: fb5082fac1794b69a1381196219a836e
     search: [chart, pie, diagram]
 
-  - css: chart-line
-    code: 0x1f4c8
+  - css: line-graph
+    code: 0xf4c8
+    from: 0x1f4c8
     uid: 7184d8171b6a9b18eabbace94cca21db
     search: [chart, graph, line, diagram]
 
-  - css: chart-bar
-    code: 0x1f4ca
+  - css: bar-graph
+    code: 0xf4ca
+    from: 0x1f4ca
     uid: 7d90b6cb3f3783170a96b09e5f0de6d5
     search: [chart, bar, diagram]
 
-  - css: chart-area
-    code: 0x1f53e
+  - css: area-graph
+    code: 0xf53e
+    from: 0x1f53e
     uid: 32b4054f35918992f723e39f4095f005
     search: [chart, area, diagram]
 
 
-  - css: tape
+  - css: voicemail
     code: 0x2707
     uid: ed62f5f10b256b0a959e6c847ed8f4a6
     search: [tape, voice mail]
 
 
   - css: graduation-cap
-    code: 0x1f393
+    code: 0xf393
+    from: 0x1f393
     uid: ef74ff62feda486fd414410e782b598a
     search: [graduation]
 
@@ -1162,17 +1218,20 @@ glyphs:
     search: [language, translate]
 
   - css: ticket
-    code: 0x1f3ab
+    code: 0xf3ab
+    from: 0x1f3ab
     uid: 333bae7aaf7395d1004875be5a075661
     search: [ticket]
 
   - css: water
-    code: 0x1f4a6
+    code: 0xf4a6
+    from: 0x1f4a6
     uid: 36a1cee80657a9c66e8384dd57bed66c
     search: [whater, wash]
 
   - css: droplet
-    code: 0x1f4a7
+    code: 0xf4a7
+    from: 0x1f4a7
     uid: 4efb719e797c54b3c58e5ae061d29d53
     search: [droplet, tint]
 
@@ -1183,22 +1242,26 @@ glyphs:
     search: []
 
   - css: credit-card
-    code: 0x1f4b3
+    code: 0xf4b3
+    from: 0x1f4b3
     uid: c5cd6ea1981cecdd85c42d9d209bc3b8
     search: [card, plastic, credit]
 
-  - css: floppy
-    code: 0x1f4be
+  - css: save
+    code: 0xf4be
+    from: 0x1f4be
     uid: 191bcf63575a78def53c907c3d3bf7f0
     search: [floppy, save]
 
   - css: clipboard
-    code: 0x1f4cb
+    code: 0xf4cb
+    from: 0x1f4cb
     uid: b95cfc96d48a72dd665e0ab109880b5e
     search: [clipboard]
 
   - css: megaphone
-    code: 0x1f4e3
+    code: 0xf4e3
+    from: 0x1f4e3
     uid: 489090690d8bd1745e365485946e20a8
     search: [megaphone, bullhorn]
 
@@ -1227,7 +1290,8 @@ glyphs:
     search: [thermometer]
 
   - css: key
-    code: 0x1f511
+    code: 0xf511
+    from: 0x1f511
     uid: 8beac4a5fd5bed9f82ca7a96cc8ba218
     search: [key, password]
 
@@ -1258,7 +1322,8 @@ glyphs:
     search: [flow, parallel, junction]
 
   - css: rocket
-    code: 0x1f680
+    code: 0xf680
+    from: 0x1f680
     uid: 9c7fd7637a41b59a358cb70893f945a5
     search: [rocket, fly]
 
@@ -1354,7 +1419,7 @@ glyphs:
     uid: d94334f23acba022bfd68e49d76b31bb
     search: [github, social, logo]
 
-  - css: github-circled
+  - css: c-github
     code: 0xf301
     uid: 91daf8fde1042a363514ca7e42d89570
     search: [github, social, logo]
@@ -1364,7 +1429,7 @@ glyphs:
     uid: 14cfd18cc1dd5fb99ba04311b888bc23
     search: [flickr, social, logo]
 
-  - css: flickr-circled
+  - css: c-flickr
     code: 0xf304
     uid: 5bbd46b2a0b972533f4d3ef243645e1d
     search: [flickr, social, logo]
@@ -1374,7 +1439,7 @@ glyphs:
     uid: 538531af0e023b15882c505ee2297cbe
     search: [vimeo, social, logo]
 
-  - css: vimeo-circled
+  - css: c-vimeo
     code: 0xf307
     uid: 6569bd1801e232180221ba0f6a4b8b27
     search: [vimeo, social, logo]
@@ -1384,7 +1449,7 @@ glyphs:
     uid: d090355c31f497b61d676416c1fd39fb
     search: [twitter, social, logo]
 
-  - css: twitter-circled
+  - css: c-twitter
     code: 0xf30a
     uid: 0419da6446cb4f31093e2022793571ca
     search: [twitter, social, logo]
@@ -1394,22 +1459,22 @@ glyphs:
     uid: bc50457410acf467b8b5721240768742
     search: [facebook, social, logo]
 
-  - css: facebook-circled
+  - css: c-facebook
     code: 0xf30d
     uid: ce1d525f3f31024c6a6b38f5e9a88953
     search: [facebook, social, logo]
 
-  - css: facebook-squared
+  - css: s-facebook
     code: 0xf30e
     uid: 47bd87a650e95b97f947d275ed968efe
     search: [facebook, social, logo]
 
-  - css: gplus
+  - css: google
     code: 0xf30f
     uid: b945f4ac2439565661e8e4878e35d379
     search: [google, plus, social, logo]
 
-  - css: gplus-circled
+  - css: c-google
     code: 0xf310
     uid: 818a6c2a76c89800632c0335e9cdafee
     search: [google, plus, social, logo]
@@ -1419,7 +1484,7 @@ glyphs:
     uid: 689febe699d74bc8862965555503e445
     search: [pinterest, social, logo]
 
-  - css: pinterest-circled
+  - css: c-pinterest
     code: 0xf313
     uid: 2e9c0fdd4d59598cb122801ab80222e7
     search: [pinterest, social, logo]
@@ -1429,7 +1494,7 @@ glyphs:
     uid: d491462e64eb5b8c4f064108a2ff1780
     search: [tumblr, social, logo]
 
-  - css: tumblr-circled
+  - css: c-tumblr
     code: 0xf316
     uid: 72a6237752f5cd00a107d097adac9ce3
     search: [tumblr, social, logo]
@@ -1439,7 +1504,7 @@ glyphs:
     uid: 7132e1233bc16cd1b6efe7e29d3613a5
     search: [linkedin, social, logo]
 
-  - css: linkedin-circled
+  - css: c-linkedin
     code: 0xf319
     uid: 21adad41ffebf469b2370d26bcb8a3c4
     search: [linkedin, social, logo]
@@ -1449,7 +1514,7 @@ glyphs:
     uid: e8d13cd05bd63219329b2b61835d776c
     search: [dribbble, social, logo]
 
-  - css: dribbble-circled
+  - css: c-dribbble
     code: 0xf31c
     uid: ec3e0b50a56867ac26a6de47953b9831
     search: [dribbble, social, logo]
@@ -1459,7 +1524,7 @@ glyphs:
     uid: ef5e2b339a93fff038cc6a28f8c91edd
     search: [stumbleupon, social, logo]
 
-  - css: stumbleupon-circled
+  - css: c-stumbleupon
     code: 0xf31f
     uid: e3606432570e59d4d852727bad063cd1
     search: [stumbleupon, social, logo]
@@ -1469,7 +1534,7 @@ glyphs:
     uid: ae49d5a5d0c2f7253f375bde5f0da2d2
     search: [lastfm, social, logo]
 
-  - css: lastfm-circled
+  - css: c-lastfm
     code: 0xf322
     uid: 9eedcbf6e07d6ba820e3e22f5ab6f734
     search: [lastfm, social, logo]
@@ -1479,7 +1544,7 @@ glyphs:
     uid: 406d96226bd9d021b7d976efa1c4a061
     search: [rdio, social, logo]
 
-  - css: rdio-circled
+  - css: c-rdio
     code: 0xf325
     uid: 4d8e1f1173bab9aac8991e9eee2fa326
     search: [rdio, social, logo]
@@ -1489,7 +1554,7 @@ glyphs:
     uid: 882d407598d4e60074f5c08b3372811e
     search: [spotify, social, logo]
 
-  - css: spotify-circled
+  - css: c-spotify
     code: 0xf328
     uid: 067edf3e1f6458e782d0254e63eb5eb6
     search: [spotify, social, logo]
@@ -1499,7 +1564,7 @@ glyphs:
     uid: 935e2e437efbb3a69ed9a83e2d2f637e
     search: [qq, social, logo]
 
-  - css: instagrem
+  - css: instagram
     code: 0xf32d
     uid: 0fbfb1cd7a847c88ea4c141d0e1bbdb5
     search: [instagrem, social, logo]
@@ -1524,7 +1589,7 @@ glyphs:
     uid: 28ccaf022b8363aeaa5b86f66e1f5173
     search: [skype, social, logo]
 
-  - css: skype-circled
+  - css: c-skype
     code: 0xf33a
     uid: 8354734770d837204e6a004885240d2e
     search: [skype, social, logo]
@@ -1569,7 +1634,7 @@ glyphs:
     uid: 5a24a9d2bffe3b66cea31ed2f57fb65a
     search: [google, circles, social, logo]
 
-  - css: vkontakte
+  - css: vk
     code: 0xf354
     uid: c9a7eca58474311926922ff8c2c1d256
     search: [vkontakte, social, logo]
@@ -1595,7 +1660,7 @@ glyphs:
     uid: e9ede58f5f90bbc3e52bf4bf53da71c0
     search: [entypo, daniel, bruce]
 
-  - css: logo-db
+  - css: db-logo
     code: 0xf603
     from: 0x1f5f9
     uid: ea16996158db7b9fedf060a4f44b27ee
